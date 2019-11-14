@@ -1,8 +1,8 @@
 
 ![images](/images/banner.png)
 
-### Implementing a 3-tier application
-# Deploy a secure 3-tier application on Oracle Cloud Infrastructure (OCI) using Free Tier resources
+# Implementing a 3-tier application
+## Deploy a secure 3-tier application on Oracle Cloud Infrastructure (OCI) using Free Tier resources
 
 
 ```bash
