@@ -42,6 +42,6 @@ Collaps
 
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/Czqin0UEYTQ/0.jpg)](https://www.youtube.com/watch?v=mP4qDgBTRDo&list=PLVQmt4FnJlnlJUimvlGN6iVXh1SFcD2ut&index=1){:target="_blank"}
 
-https://www.linkedin.com/jobs/view/1566385417 
+Interested to join [Oracle](https://media.licdn.com/dms/image/C4E0BAQGmS4ZS9i2T6w/company-logo_100_100/0?e=1581552000&v=beta&t=R72eIpkaw6MBXnUme6ZkG82PxXbD_CU82p1qhkHrNss)(https://www.linkedin.com/jobs/view/1566385417)
 
 
