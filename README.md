@@ -39,8 +39,8 @@ runcmd:
  - nohup python /idcs-sample-app/manage.py runserver 0.0.0.0:8080 &
 ```
 
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/Czqin0UEYTQ/0.jpg)](https://www.youtube.com/watch?v=mP4qDgBTRDo&list=PLVQmt4FnJlnlJUimvlGN6iVXh1SFcD2ut&index=1){:target="_blank"}
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/Czqin0UEYTQ/0.jpg)](https://www.youtube.com/watch?v=mP4qDgBTRDo&list=PLVQmt4FnJlnlJUimvlGN6iVXh1SFcD2ut&index=1) {:target="_blank"}
 
-Interested to join [Oracle](https://www.linkedin.com/jobs/view/1566385417){:target="_blank"}?
+Interested to join [Oracle](https://www.linkedin.com/jobs/view/1566385417) {:target="_blank"}?
 
 
