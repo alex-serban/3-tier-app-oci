@@ -30,7 +30,7 @@ runcmd:
  - yum install -y oracle-instantclient18.3-sqlplus.x86_64
  - yum install -y oracle-instantclient18.3-tools.x86_64
  - [ wget,  --output-document=wallet.zip, "https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/bEIRP-U7NiU1KgCWWPvm8JoE-sRnTZ1gLvnIAccYxCo/n/frvly4ywct1p/b/security/o/Wallet_security_3.zip", -P, /usr/lib/oracle/18.3/client64/lib/network/admin]
- - [  unzip, /usr/lib/oracle/18.3/client64/lib/network/admin/wallet.zip, -d, /usr/lib/oracle/18.3/client64/lib/network/admin/]
+ - [ unzip, /idcs-sample-app/wallet.zip, -d, /usr/lib/oracle/18.3/client64/lib/network/admin/]
  - echo "export LD_LIBRARY_PATH=/usr/lib/oracle/18.3/client64/lib:$LD_LIBRARY_PATH" >>/home/opc/.bash_profile
  - echo "cd /idcs-sample-app" >> /home/opc/.bash_profile
  - export LD_LIBRARY_PATH=/usr/lib/oracle/18.3/client64/lib:$LD_LIBRARY_PATH
