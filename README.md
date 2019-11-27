@@ -76,6 +76,7 @@ echo "</body></html>"
 
 
 You can consume the entire tutorial on this [YouTube playlist][playlist].
+
 Interested to join [Oracle][jd]?
 
 [cert]: https://www.oracle.com/cloud/iaas/training/certification.html
@@ -83,5 +84,5 @@ Interested to join [Oracle][jd]?
 [free]: https://www.oracle.com/cloud/free/
 [puttygen]: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 [moba]: https://mobaxterm.mobatek.net/download-home-edition.html
-[playlist]: https://www.youtube.com/watch?v=mP4qDgBTRDo&list=PLVQmt4FnJlnlJUimvlGN6iVXh1SFcD2ut&index=1
+[playlist]: https://www.youtube.com/watch?v=Czqin0UEYTQ&list=PLVQmt4FnJlnlJUimvlGN6iVXh1SFcD2ut&index=1
 [jd]: https://www.linkedin.com/jobs/view/1566385417
