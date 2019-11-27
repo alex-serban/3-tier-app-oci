@@ -17,6 +17,19 @@ The purpose of the tutorial is to familiarize the viewer with the OCI Web Consol
 
 ![images](/images/arch.png)
 
+### Steps:
+
+
+
+
+#### Creating a compartment:
+
+#### Creating a Virtual Cloud Network (VCN):
+
+#### Creating a Public Subnet:
+
+#### Creating a Bastion Host:
+
 ```bash
 #cloud-config
 write_files:
