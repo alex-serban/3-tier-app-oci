@@ -73,6 +73,9 @@ echo "</body></html>"
 
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/Czqin0UEYTQ/0.jpg)](https://www.youtube.com/watch?v=mP4qDgBTRDo&list=PLVQmt4FnJlnlJUimvlGN6iVXh1SFcD2ut&index=1)
 
+
+
+You can consume the entire tutorial on this [YouTube playlist][https://www.youtube.com/watch?v=mP4qDgBTRDo&list=PLVQmt4FnJlnlJUimvlGN6iVXh1SFcD2ut&index=1].
 Interested to join [Oracle](https://www.linkedin.com/jobs/view/1566385417)?
 
 [cert]: https://www.oracle.com/cloud/iaas/training/certification.html
