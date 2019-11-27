@@ -15,7 +15,7 @@ The purpose of the tutorial is to familiarize the viewer with the OCI Web Consol
 
 ### Architecture:
 
-![images](/images/architecture.png)
+![images](/images/arch.png)
 
 ```bash
 #cloud-config
