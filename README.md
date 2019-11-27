@@ -73,8 +73,8 @@ echo "</body></html>"
 
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/Czqin0UEYTQ/0.jpg)](https://www.youtube.com/watch?v=mP4qDgBTRDo&list=PLVQmt4FnJlnlJUimvlGN6iVXh1SFcD2ut&index=1)
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=mP4qDgBTRDo
-" target="_blank"><img src="http://img.youtube.com/vi/Czqin0UEYTQ/0.jpg" 
+<a href="http://www.youtube.com/watch?v=mP4qDgBTRDo
+><img src="http://img.youtube.com/vi/Czqin0UEYTQ/0.jpg" 
 alt="imajine" width="240" height="180" border="10" /></a>
 
 You can consume the entire tutorial on this [YouTube playlist][playlist].
