@@ -32,7 +32,7 @@ The purpose of the tutorial is to familiarize the viewer with the OCI Web Consol
 #### Creating a compartment:  
 A compartment is a logical container which helps organize and manage access control to OCI resources (Compute, Storage, Network, Database etc). For the purpose of this tutorial 
 
-<a href="https://www.youtube.com/watch?v=XRPuwaaL2W8><img src="http://img.youtube.com/vi/XRPuwaaL2W8/0.jpg" alt="imajine" width="240" height="180" border="10" /></a>
+<a href="https://www.youtube.com/watch?v=XRPuwaaL2W8"><img src="http://img.youtube.com/vi/XRPuwaaL2W8/0.jpg" width="240" height="180" border="10" /></a>
 
 
 #### Creating a Virtual Cloud Network (VCN):  
