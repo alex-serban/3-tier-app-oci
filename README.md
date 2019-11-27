@@ -11,7 +11,7 @@ The purpose of the tutorial is to familiarize the viewer with OCI Web Console as
 ### Pre-requisities:
    1. Register for an **OCI Trial & Free Tier account** [here][free].
    2. Download a **SSH key generator tool** available on your workstation. For this demo I've used [PuTTYgen][puttygen]. 
-   3. Install a **SSH/SCP terminal client***. [MobaXterm][moba] was my choice for the demo. 
+   3. Install a **SSH/SCP terminal client**. [MobaXterm][moba] was my choice for the demo. 
 
 ```bash
 #cloud-config
