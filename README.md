@@ -3,7 +3,15 @@
 
 # Implementing a 3-tier application
 ## Deploy a secure 3-tier application on Oracle Cloud Infrastructure (OCI) using Free Tier resources
+---
 
+This is a tutorial that shows how to deploy a very simple 3-tier architecture on the Oracle Cloud Infrastructure (OCI). 
+The purpose of the tutorial is to familiarize the viewer with OCI Web Console as well as introduce basic infrastructure concepts for users making the first steps using cloud services. 
+
+### Pre-requisities:
+    i.      Register for an **OCI Trial & Free Tier account** [here][free].
+    ii.     A **SSH key generator tool** available on your workstation. For this demo I've used [PuTTYgen][puttygen]. 
+    iii.    A **SSH/SCP terminal client***. [MobaXterm][moba] was my choice. 
 
 ```bash
 #cloud-config
@@ -43,4 +51,6 @@ runcmd:
 
 Interested to join [Oracle](https://www.linkedin.com/jobs/view/1566385417)?
 
-
+[free]: https://www.oracle.com/cloud/free/
+[puttygen]: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+[moba]: https://mobaxterm.mobatek.net/download-home-edition.html
