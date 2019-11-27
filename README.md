@@ -18,9 +18,7 @@ The purpose of the tutorial is to familiarize the viewer with the OCI Web Consol
 ![images](/images/arch.png)
 
 ### Steps:
-
 [Creating a compartment](#creating-a-compartment)
-
 [Creating a VCN](#creating-a-virtual-cloud-network-vcn)
 
 
