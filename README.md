@@ -18,14 +18,14 @@ The purpose of the tutorial is to familiarize the viewer with the OCI Web Consol
 ### Steps & components to create:  
 * [Compartment](#creating-a-compartment)  
 * [Virtual Cloud Network](#creating-a-virtual-cloud-network-vcn)  
-* [Public Subnet]()  
-* [Bastion Host]()  
-* [Private Subnet]()  
-* [Application Node]()  
-* [Autonomous Database]()  
-* [Load Balancer]()  
-* [CGI Application]()  
-* [Scalling out]()  
+* [Public Subnet](#creating-a-public-subnet)  
+* [Bastion Host](#creating-a-bastion-host)  
+* [Private Subnet](#creating-a-private-subnet)  
+* [Application Node](#creating-an-application-node)  
+* [Autonomous Database](#creating-the-autonomous-database)  
+* [Load Balancer](#creating-the-load-balancer)  
+* [CGI Application](#developing-a-cgi-application)  
+* [Scalling out](#scalling-out-using-oci-custom-images)  
 
 
 
