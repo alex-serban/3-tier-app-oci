@@ -9,9 +9,9 @@ This is a tutorial that shows how to deploy a very simple 3-tier architecture on
 The purpose of the tutorial is to familiarize the viewer with OCI Web Console as well as introduce basic infrastructure concepts for users making the first steps using cloud services. 
 
 ### Pre-requisities:
-    i.      Register for an **OCI Trial & Free Tier account** [here][free].
-    ii.     A **SSH key generator tool** available on your workstation. For this demo I've used [PuTTYgen][puttygen]. 
-    iii.    A **SSH/SCP terminal client***. [MobaXterm][moba] was my choice. 
+    1.      Register for an **OCI Trial & Free Tier account** [here][free].
+    2.     A **SSH key generator tool** available on your workstation. For this demo I've used [PuTTYgen][puttygen]. 
+    3.    A **SSH/SCP terminal client***. [MobaXterm][moba] was my choice. 
 
 ```bash
 #cloud-config
