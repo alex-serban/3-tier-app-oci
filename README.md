@@ -5,7 +5,7 @@
 ## Deploy a secure 3-tier application on Oracle Cloud Infrastructure (OCI) using Free Tier resources
 ---
 
-This is a tutorial that shows how to deploy a very simple 3-tier architecture on the Oracle Cloud Infrastructure (OCI). 
+This is a tutorial that shows how to deploy a very simple 3-tier architecture on the [Oracle Cloud Infrastructure (OCI)][oci]. 
 The purpose of the tutorial is to familiarize the viewer with OCI Web Console as well as introduce basic infrastructure concepts for users making the first steps using cloud services. 
 
 ### Pre-requisities:
@@ -51,6 +51,7 @@ runcmd:
 
 Interested to join [Oracle](https://www.linkedin.com/jobs/view/1566385417)?
 
+[oci]: https://www.oracle.com/cloud/
 [free]: https://www.oracle.com/cloud/free/
 [puttygen]: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 [moba]: https://mobaxterm.mobatek.net/download-home-edition.html
