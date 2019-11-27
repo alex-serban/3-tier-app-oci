@@ -15,8 +15,8 @@ The purpose of the tutorial is to familiarize the viewer with the OCI Web Consol
 ### Architecture:  
 ![images](/images/arch.png)
 
-### Steps and components to be created:  
-   [Compartment](#creating-a-compartment)  
+### Steps & components to create:  
+  * [Compartment](#creating-a-compartment)  
    [Virtual Cloud Network](#creating-a-virtual-cloud-network-vcn)  
    [Public Subnet]()  
    [Bastion Host]()  
