@@ -32,7 +32,7 @@ The purpose of the tutorial is to familiarize the viewer with the OCI Web Consol
 #### Creating a compartment:  
 A compartment is a logical container which helps organize and manage access control to OCI resources (Compute, Storage, Network, Database etc). By default, any OCI tenancy has a default root compartment, named after the tenancy itself. Best practice is to create a compartment to separate usage among projects, departments, scope etc. For the purpose of this tutorial I've created a container to host all resources for implementing my 3-tier architecture.
 
-<a href="https://www.youtube.com/watch?v=XRPuwaaL2W8"><img src="http://img.youtube.com/vi/XRPuwaaL2W8/0.jpg" width="858" height="480" border="10" /></a>
+<a href="https://www.youtube.com/watch?v=XRPuwaaL2W8"><img src="http://img.youtube.com/vi/XRPuwaaL2W8/0.jpg" width="252" height="240" border="10" /></a>
 
 
 #### Creating a Virtual Cloud Network (VCN):  
