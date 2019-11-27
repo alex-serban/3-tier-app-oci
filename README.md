@@ -6,7 +6,7 @@
 ---
 
 This is a tutorial that shows how to deploy a very simple 3-tier architecture on the [Oracle Cloud Infrastructure (OCI)][oci]. 
-The purpose of the tutorial is to familiarize the viewer with OCI Web Console as well as introduce basic infrastructure concepts for users making the first steps using cloud services. 
+The purpose of the tutorial is to familiarize the viewer with the OCI Web Console as well as introduce basic infrastructure concepts for users making the first steps using cloud services, providing good practice for those who are pursuing the [OCI Architect Associate certification][cert]. 
 
 ### Pre-requisities:
    1. Register for an **OCI Trial & Free Tier account** [here][free].
@@ -51,6 +51,7 @@ runcmd:
 
 Interested to join [Oracle](https://www.linkedin.com/jobs/view/1566385417)?
 
+[cert]: https://www.oracle.com/cloud/iaas/training/certification.html
 [oci]: https://www.oracle.com/cloud/
 [free]: https://www.oracle.com/cloud/free/
 [puttygen]: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
