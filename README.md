@@ -3,8 +3,7 @@
 
 # Implementing a 3-tier application
 ## Deploy a secure 3-tier application on Oracle Cloud Infrastructure (OCI) using Free Tier resources
----
-
+---  
 This is a tutorial that shows how to deploy a very simple 3-tier architecture on the [Oracle Cloud Infrastructure (OCI)][oci]. 
 The purpose of the tutorial is to familiarize the viewer with the OCI Web Console as well as introduce basic infrastructure concepts for users making the first steps using cloud services, providing good practice for those who are pursuing the [OCI Architect Associate certification][cert]. 
 
@@ -13,11 +12,10 @@ The purpose of the tutorial is to familiarize the viewer with the OCI Web Consol
    2. Download a **SSH key generator tool** available on your workstation. For this demo I've used [PuTTYgen][puttygen]. 
    3. Install a **SSH/SCP terminal client**. [MobaXterm][moba] was my choice for the demo. 
 
-### Architecture:
-
+### Architecture:  
 ![images](/images/arch.png)
 
-### Steps:
+### Steps:  
 [Creating a compartment](#creating-a-compartment)  
 [Creating a VCN](#creating-a-virtual-cloud-network-vcn)  
 
