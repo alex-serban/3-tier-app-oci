@@ -15,19 +15,31 @@ The purpose of the tutorial is to familiarize the viewer with the OCI Web Consol
 ### Architecture:  
 ![images](/images/arch.png)
 
-### Steps:  
-[Creating a compartment](#creating-a-compartment)  
-[Creating a VCN](#creating-a-virtual-cloud-network-vcn)  
+### Steps and components to be created:  
+[Compartment](#creating-a-compartment)  
+[Virtual Cloud Network](#creating-a-virtual-cloud-network-vcn)  
+[Public Subnet]()
+[Bastion Host]()
+[Private Subnet]()
+[Application Node]()
+[Autonomous Database]()
+[Load Balancer]()
+[CGI Application]()
+[Scalling out]()
 
 
 
-#### Creating a compartment:
+#### Creating a compartment:  
+#### Creating a Virtual Cloud Network (VCN):  
+#### Creating a Public Subnet:  
+#### Creating a Bastion Host:  
+#### Creating a Private Subnet:  
+#### Creating an Application Node:  
+#### Creating the Autonomous Database:
+#### Creating the Load Balancer:
+#### Developing a CGI application:  
+#### Scalling out using OCI Custom Images:
 
-#### Creating a Virtual Cloud Network (VCN):
-
-#### Creating a Public Subnet:
-
-#### Creating a Bastion Host:
 
 ```bash
 #cloud-config
