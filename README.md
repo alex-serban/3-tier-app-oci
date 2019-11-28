@@ -9,7 +9,7 @@ The purpose of the tutorial is to familiarize the viewer with the OCI Web Consol
 
 ### Pre-requisities:
    1. Register for an **OCI Trial & Free Tier account** [here][free].
-   2. Download a **SSH key generator tool** available on your workstation. For this demo I've used [PuTTYgen][puttygen]. 
+   2. Download a **SSH key generator tool** and install it on your workstation. For this demo I've used [PuTTYgen][puttygen]. 
    3. Install a **SSH/SCP terminal client**. [MobaXterm][moba] was my choice for the demo. 
 
 ### Architecture:  
@@ -30,11 +30,12 @@ The purpose of the tutorial is to familiarize the viewer with the OCI Web Consol
 
 
 #### Creating a compartment:  
-A compartment is a logical container which helps organize and manage access control to OCI resources (Compute, Storage, Network, Database etc). By default, any OCI tenancy has a default root compartment, named after the tenancy itself. Best practice is to create a compartment to separate usage among projects, departments, scope etc. For the purpose of this tutorial I've created a container to host all resources for implementing my 3-tier architecture.
+A compartment is a logical container which helps organize and manage access control to OCI resources (Compute, Storage, Network, Database etc). By default, any OCI tenancy has a default root compartment, named after the tenancy itself. Best practice is to create a compartment to separate usage among projects, departments, scope etc. For the purpose of this tutorial I've created a container to host all resources for implementing my 3-tier architecture. 
 
 [![Compartment](https://img.youtube.com/vi/XRPuwaaL2W8/0.jpg)](https://www.youtube.com/watch?v=XRPuwaaL2W8)
 
 #### Creating a Virtual Cloud Network (VCN):  
+When working with OCI, setting up a VCN is one of the first steps you'll have to undertake. The VCN is a virtual, private network that you set up in Oracle data centers. It closely resembles a traditional network, with firewall rules and specific types of communication gateways that you can choose to use. A VCN resides in a single Oracle Cloud Infrastructure region and covers a single, contiguous IPv4 CIDR block of your choice. You can read more about what a CIDR is [here][cidr], but for the purpose of this tutorial is enough to understand that a CIDR is a method for allocating IP addresses 
 
 [![VCN](https://img.youtube.com/vi/V0G8X_Dbpz0/0.jpg)](https://www.youtube.com/watch?v=V0G8X_Dbpz0)
    
@@ -144,3 +145,4 @@ Interested to join [Oracle][jd]?
 [moba]: https://mobaxterm.mobatek.net/download-home-edition.html
 [playlist]: https://www.youtube.com/watch?v=Czqin0UEYTQ&list=PLVQmt4FnJlnlJUimvlGN6iVXh1SFcD2ut&index=1
 [jd]: https://www.linkedin.com/jobs/view/1566385417
+[cidr]: https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing
