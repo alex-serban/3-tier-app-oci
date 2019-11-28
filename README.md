@@ -47,7 +47,7 @@ For implementing the 3-tier architecture I will need an *Internet Gateway* which
 [![Public Subnet](https://img.youtube.com/vi/trp2b7mNJzI/0.jpg)](https://www.youtube.com/watch?v=trp2b7mNJzI)
 
 #### Creating a Bastion Host:  
-A bastion host is a special-purpose computer on a network specifically designed and configured to withstand attacks. In the architecture I'm proposing, the Bastion Host acts as a proxy through which I can access the Application Nodes which will sit in the Private Subnet. I've chosen for the Bastion Host to run Oracle Linux. To access it, I need first to generate a pair of SSH keys using [PuTTYgen][puttygen]. To connect to the instance I used [MobaXterm][moba]. The default user for login is `opc` and you can use the `sudo` command to run administrative tasks.
+A bastion host is a special-purpose computer on a network specifically designed and configured to withstand attacks. In the architecture I'm proposing, the *Bastion Host* acts as a proxy through which I can access the *Application Nodes* which will sit in the Private Subnet. I've chosen for the *Bastion Host* to run Oracle Linux. To access it, I need first to generate a pair of SSH keys using [PuTTYgen][puttygen]. To connect to the instance I used [MobaXterm][moba]. The default user for login is `opc` and you can use the `sudo` command to run administrative tasks.
 
 More on accessing an Oracle Linux Instance [here][accessol].  
 
@@ -63,14 +63,39 @@ A *Service Gateway* is yet another virtual router which provides a path for priv
 [![Private Subnet](https://img.youtube.com/vi/G8VGoByCgiw/0.jpg)](https://www.youtube.com/watch?v=G8VGoByCgiw)
 
 #### Creating an Application Node:  
+The process of creating the *Application Node* is similar the *Bastion Host*, but placing it in the private subnet will inhibit a public IP to be assigned, so connection will only be possible through the *Bastion Host*. 
 
 [![Application Node](https://img.youtube.com/vi/PV5ueOK1KXw/0.jpg)](https://www.youtube.com/watch?v=PV5ueOK1KXw)
 
 #### Creating the Autonomous Database:
+An autonomous database is a cloud database that uses machine learning to eliminate the human labor associated with database tuning, security, backups, updates, and other routine management tasks traditionally performed by database administrators (DBAs).
+
+For authenticating access to the Autonomous Database an *Oracle Wallet* is used. To make the *Oracle Wallet* accessible I will upload it to an Object Storage which will allow for private download through the *Service Gateway* onto the *Application Node*.
 
 [![Autonomous Database](https://img.youtube.com/vi/sIuCh63tLgo/0.jpg)](https://www.youtube.com/watch?v=sIuCh63tLgo)
 
 #### Creating the Load Balancer:
+The Load Balancing service provides automated traffic distribution from one entry point to multiple servers reachable from your virtual cloud network (VCN). The service offers a load balancer with your choice of a public or private IP address. In my 3-tier architecture, the *Load Balancer* will be deployed in the public subnet, to allow for connections from outside the VCN, but will route HTTP traffic to the *Application Node* which resides in the private subnet. 
+
+For demonstrating this capability I'll create an [Apache HTTP Server][apache] on the *Application Node*.
+Here are the commands used to install and configure the HTTP server:
+
+```bash
+# installing Apache HTTP Server
+sudo yum install -y httpd
+
+# starting and enabling HTTP Server to start when the VM boots
+sudo systemctl enable httpd
+sudo systemctl start httpd
+
+# opening port 80 (http) on the local VM firewall
+sudo firewall-cmd --permanent --zone=public --add-port=80/tcp
+sudo firewall-cmd --reload
+
+# creating the index.html
+cd /var/www/html/
+echo "<p>This is Application Node - 1</p>" > index.html
+```
 
 [![Load Balancer](https://img.youtube.com/vi/djNfEnSBpiA/0.jpg)](https://www.youtube.com/watch?v=djNfEnSBpiA)
 
@@ -154,3 +179,4 @@ Interested to join [Oracle][jd]?
 [cidr]: https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing
 [accessol]: https://docs.cloud.oracle.com/iaas/Content/GSG/Tasks/testingconnection.htm
 [osn]: https://www.oracle.com/cloud/networking/service-gateway.html
+[apache]: https://httpd.apache.org/
