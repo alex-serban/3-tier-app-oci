@@ -112,17 +112,26 @@ SELINUX=disabled
 
 Connecting to the Autonomous Database is achieved through the *Oracle Instant Client*. The [Oracle Instant Client][instantclient] enables applications to connect to an Oracle Database. The Instant Client libraries provide the necessary network connectivity, as well as basic and high end data features, to make full use of Oracle Database.
 
-Installing the Oracle Instant Client 
+Here are the commands used for installation:  
 ```bash
 sudo yum install -y oracle-instantclient18.3-basic.x86_64 
 sudo yum install -y oracle-instantclient18.3-devel.x86_64 
 sudo yum install -y oracle-instantclient18.3-sqlplus.x86_64
 sudo yum install -y oracle-instantclient18.3-tools.x86_64
 ```
-or in one command
+or in one line
 ```bash
 sudo yum install -y oracle-instantclient18.3*
 ```
+
+Resolving the path dependencies (`sudo su` command needs to be executed to run the following as *root*):
+```bash
+export LD_LIBRARY_PATH=/usr/lib/oracle/18.3/client64/lib:$LD_LIBRARY_PATH
+echo "export LD_LIBRARY_PATH=/usr/lib/oracle/18.3/client64/lib:$LD_LIBRARY_PATH" >>/etc/bashrc
+echo "/usr/lib/oracle/18.3/client64/lib/" > /etc/ld.so.conf.d/oracle.conf
+ldconfig
+```
+To authenticate to the *Autonomous Database* the *Oracle Wallet* needs to be downloaded from the Object Storage and unzipped in the `/usr/lib/oracle/18.3/client64/lib/network/admin/` directory. 
 
 ```bash
 #!/bin/sh
