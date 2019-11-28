@@ -102,6 +102,18 @@ echo "<p>This is Application Node - 1</p>" > index.html
 
 #### Developing a CGI application:  
 
+Installing the Oracle Instant Client 
+```bash
+sudo yum install -y oracle-instantclient18.3-basic.x86_64 
+sudo yum install -y oracle-instantclient18.3-devel.x86_64 
+sudo yum install -y oracle-instantclient18.3-sqlplus.x86_64
+sudo yum install -y oracle-instantclient18.3-tools.x86_64
+```
+or in one command
+```bash
+sudo yum install -y oracle-instantclient18.3*
+```
+
 [![CGI Application](https://img.youtube.com/vi/yYNX3xv69MQ/0.jpg)](https://www.youtube.com/watch?v=yYNX3xv69MQ)
 
 #### Scalling out using OCI Custom Images:
