@@ -103,9 +103,9 @@ echo "<p>This is Application Node - 1</p>" > index.html
 #### Developing a CGI application:  
 The purpose of this step is to create a *content-generating program* which connects to the *Autonomous Database* and displays the content of a database table in HTML served through the browser using the *Apache HTTP Server*. 
 
-Editing `httpd.conf` from file located in `/etc/httpd/conf`
+The *Common Gateway Interface* or *CGI* is an interface specification for web servers to execute programs that execute like console applications running on a server that generates web pages dynamically. Enabling CGI support for my HTTP server requires editing the `httpd.conf` from file located in `/etc/httpd/conf`. It's enough to follow the video tutorial to enable this, more details for enabling CGI on Apache can be found [here][cgi].
 
-Next step is to disable *SELinux*, which will by default forbid CGI scripts from running on your Application Node. *SELinux* or *Security-Enhanced Linux* is a Linux kernel module that provides a mechanism for supporting access control security policies. Disabling SELinux temporarily is done using the `setenforce 0` command, to make this persistent after a reboot parameter `SELINUX` in the `/etc/selinux/config` needs to read:
+Next step is to disable *SELinux*, which will by default forbid CGI scripts from running on your Application Node. *SELinux* or *Security-Enhanced Linux* is a Linux kernel module that provides a mechanism for supporting access control security policies. Disabling SELinux temporarily is done using the `sudo setenforce 0` command, to make this persistent after a reboot parameter `SELINUX` in the `/etc/selinux/config` needs to be changed to:
 ```bash
 SELINUX=disabled
 ```
@@ -204,3 +204,4 @@ Interested to join [Oracle][jd]?
 [accessol]: https://docs.cloud.oracle.com/iaas/Content/GSG/Tasks/testingconnection.htm
 [osn]: https://www.oracle.com/cloud/networking/service-gateway.html
 [apache]: https://httpd.apache.org/
+[cgi]: https://httpd.apache.org/docs/2.4/howto/cgi.html
