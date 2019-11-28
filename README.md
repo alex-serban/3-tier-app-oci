@@ -32,45 +32,41 @@ The purpose of the tutorial is to familiarize the viewer with the OCI Web Consol
 #### Creating a compartment:  
 A compartment is a logical container which helps organize and manage access control to OCI resources (Compute, Storage, Network, Database etc). By default, any OCI tenancy has a default root compartment, named after the tenancy itself. Best practice is to create a compartment to separate usage among projects, departments, scope etc. For the purpose of this tutorial I've created a container to host all resources for implementing my 3-tier architecture.
 
-<a href="https://www.youtube.com/watch?v=XRPuwaaL2W8"><img src="http://img.youtube.com/vi/XRPuwaaL2W8/0.jpg" width="336" height="188"
-   border="10" /></a>
-
+[![Compartment](https://img.youtube.com/vi/XRPuwaaL2W8/0.jpg)](https://www.youtube.com/watch?v=XRPuwaaL2W8)
 
 #### Creating a Virtual Cloud Network (VCN):  
 
-<a href="https://www.youtube.com/watch?v=V0G8X_Dbpz0"><img src="http://img.youtube.com/vi/V0G8X_Dbpz0/0.jpg" width="336" height="188" border="0"/></a>
+[![VCN](https://img.youtube.com/vi/V0G8X_Dbpz0/0.jpg)](https://www.youtube.com/watch?v=V0G8X_Dbpz0)
    
 #### Creating a Public Subnet:  
 
-<a href="https://www.youtube.com/watch?v=trp2b7mNJzI"><img src="http://img.youtube.com/vi/trp2b7mNJzI/0.jpg" width="336" height="188" border="0"/></a>
+[![Public Subnet](https://img.youtube.com/vi/trp2b7mNJzI/0.jpg)](https://www.youtube.com/watch?v=trp2b7mNJzI)
 
 #### Creating a Bastion Host:  
 
-<a href="https://www.youtube.com/watch?v=AB6BWhG1Djs"><img src="http://img.youtube.com/vi/AB6BWhG1Djs/0.jpg" width="336" height="188" border="0"/></a>
+[![Bastion Host](https://img.youtube.com/vi/AB6BWhG1Djs/0.jpg)](https://www.youtube.com/watch?v=AB6BWhG1Djs)
 
 #### Creating a Private Subnet: 
 
-<a href="https://www.youtube.com/watch?v=G8VGoByCgiw"><img src="http://img.youtube.com/vi/G8VGoByCgiw/0.jpg" width="336" height="188" border="0"/></a>
+[![Private Subnet](https://img.youtube.com/vi/G8VGoByCgiw/0.jpg)](https://www.youtube.com/watch?v=G8VGoByCgiw)
 
 #### Creating an Application Node:  
 
-<a href="https://www.youtube.com/watch?v=PV5ueOK1KXw"><img src="http://img.youtube.com/vi/PV5ueOK1KXw/0.jpg" width="336" height="188" border="0"/></a>
+[![Application Node](https://img.youtube.com/vi/PV5ueOK1KXw/0.jpg)](https://www.youtube.com/watch?v=PV5ueOK1KXw)
 
 #### Creating the Autonomous Database:
 
-<a href="https://www.youtube.com/watch?v=sIuCh63tLgo"><img src="http://img.youtube.com/vi/sIuCh63tLgo/0.jpg" width="336" height="188" border="0"/></a>
+[![Autonomous Database](https://img.youtube.com/vi/sIuCh63tLgo/0.jpg)](https://www.youtube.com/watch?v=sIuCh63tLgo)
 
 #### Creating the Load Balancer:
 
-<a href="https://www.youtube.com/watch?v=djNfEnSBpiA"><img src="http://img.youtube.com/vi/djNfEnSBpiA/0.jpg" width="336" height="188" border="0"/></a>
+[![Load Balancer](https://img.youtube.com/vi/djNfEnSBpiA/0.jpg)](https://www.youtube.com/watch?v=djNfEnSBpiA)
 
 #### Developing a CGI application:  
 
-<a href="https://www.youtube.com/watch?v=yYNX3xv69MQ"><img src="http://img.youtube.com/vi/yYNX3xv69MQ/0.jpg" width="336" height="188" border="0"/></a>
+[![CGI Application](https://img.youtube.com/vi/yYNX3xv69MQ/0.jpg)](https://www.youtube.com/watch?v=yYNX3xv69MQ)
 
 #### Scalling out using OCI Custom Images:
-
-<a href="https://www.youtube.com/watch?v=DtawSf085-s"><img src="http://img.youtube.com/vi/DtawSf085-s/0.jpg" width="336" height="188" border="0"/></a>
 
 [![OCI Custom Images](https://img.youtube.com/vi/DtawSf085-s/0.jpg)](https://www.youtube.com/watch?v=DtawSf085-s)
 
