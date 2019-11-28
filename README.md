@@ -47,18 +47,18 @@ For implementing the 3-tier architecture I will need an *Internet Gateway* which
 [![Public Subnet](https://img.youtube.com/vi/trp2b7mNJzI/0.jpg)](https://www.youtube.com/watch?v=trp2b7mNJzI)
 
 #### Creating a Bastion Host:  
-A bastion host is a special-purpose computer on a network specifically designed and configured to withstand attacks. In the architecture I'm proposing, the Bastion Host acts as a 'gateway' through which I can access the Application Nodes which will sit in the Private Subnet. I've chosen for the Bastion Host to run Oracle Linux. To access it, I need first to generate a pair of SSH keys using [PuTTYgen][puttygen]. To connect to the instance I used [MobaXterm][moba]. The default user for login is `opc` and you can use the `sudo` command to run administrative tasks.
+A bastion host is a special-purpose computer on a network specifically designed and configured to withstand attacks. In the architecture I'm proposing, the Bastion Host acts as a proxy through which I can access the Application Nodes which will sit in the Private Subnet. I've chosen for the Bastion Host to run Oracle Linux. To access it, I need first to generate a pair of SSH keys using [PuTTYgen][puttygen]. To connect to the instance I used [MobaXterm][moba]. The default user for login is `opc` and you can use the `sudo` command to run administrative tasks.
 
 More on accessing an Oracle Linux Instance [here][accessol].  
 
 [![Bastion Host](https://img.youtube.com/vi/AB6BWhG1Djs/0.jpg)](https://www.youtube.com/watch?v=AB6BWhG1Djs)
 
 #### Creating a Private Subnet: 
-Creating the private subnet is similar to creating the public subnet, difference is that I will restrict the VNICs to have public IPs allocated to them. Besides the mandatory `Route Table` and `Security List` I will need a `NAT Gateway` and `Service Gateway`.
+Creating the private subnet is similar to creating the public subnet, difference is that I will restrict the VNICs to have public IPs allocated to them. Besides the mandatory *Route Table* and *Security List* I will need a *NAT Gateway* and *Service Gateway*.
 
-The `NAT Gateway` is a virtual router, similar to the `Internet Gateway`, available only for resources without public IP addresses that need to initiate connections to the internet (example: for software updates) but need to be protected from inbound connections from the internet.
+The *NAT Gateway* is a virtual router, similar to the *Internet Gateway*, available only for resources without public IP addresses that need to initiate connections to the internet (example: for software updates) but need to be protected from inbound connections from the internet.
 
-A `Service Gateway` is yet another virtual router which provides a path for private network traffic between the VCN and the [Oracle Services Network][osn] (examples: Oracle Cloud Infrastructure Object Storage and Autonomous Database). For example, DB Systems in a private subnet in your VCN can back up data to Object Storage without needing public IP addresses or access to the internet.
+A *Service Gateway* is yet another virtual router which provides a path for private network traffic between the VCN and the [Oracle Services Network][osn] (examples: Oracle Cloud Infrastructure Object Storage and Autonomous Database). For example, DB Systems in a private subnet in your VCN can back up data to Object Storage without needing public IP addresses or access to the internet.
 
 [![Private Subnet](https://img.youtube.com/vi/G8VGoByCgiw/0.jpg)](https://www.youtube.com/watch?v=G8VGoByCgiw)
 
