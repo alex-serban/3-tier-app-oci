@@ -133,6 +133,8 @@ ldconfig
 ```
 To authenticate to the *Autonomous Database* the *Oracle Wallet* needs to be downloaded from the Object Storage and unzipped in the `/usr/lib/oracle/18.3/client64/lib/network/admin/` directory. 
 
+Final step is to write the application. In the `/var/www/html` director the `index.html` file needs to be replaced with the following `index.sh` file:
+
 ```bash
 #!/bin/sh
 
