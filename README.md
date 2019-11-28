@@ -47,6 +47,9 @@ For implementing the 3-tier architecture I will need an *Internet Gateway* which
 [![Public Subnet](https://img.youtube.com/vi/trp2b7mNJzI/0.jpg)](https://www.youtube.com/watch?v=trp2b7mNJzI)
 
 #### Creating a Bastion Host:  
+A bastion host is a special-purpose computer on a network specifically designed and configured to withstand attacks. In the architecture I'm proposing, the Bastion Host acts as a 'gateway' through which I can access the Application Nodes which will sit in the Private Subnet. I've chosen for the Bastion Host to run Oracle Linux. To access it I need first to generate a pair of SSH keys using [PuTTYgen][puttygen]. To connect to the instance I used [MobaXterm][moba]. The default user for login is `opc` and you can use the `sudo` command to run administrative tasks.
+
+More on accessing an Oracle Linux Instance [here][accessingol].  
 
 [![Bastion Host](https://img.youtube.com/vi/AB6BWhG1Djs/0.jpg)](https://www.youtube.com/watch?v=AB6BWhG1Djs)
 
@@ -144,3 +147,4 @@ Interested to join [Oracle][jd]?
 [playlist]: https://www.youtube.com/watch?v=Czqin0UEYTQ&list=PLVQmt4FnJlnlJUimvlGN6iVXh1SFcD2ut&index=1
 [jd]: https://www.linkedin.com/jobs/view/1566385417
 [cidr]: https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing
+[accessol]: https://docs.cloud.oracle.com/iaas/Content/GSG/Tasks/testingconnection.htm
