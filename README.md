@@ -37,6 +37,10 @@ A compartment is a logical container which helps organize and manage access cont
 
 
 #### Creating a Virtual Cloud Network (VCN):  
+
+<a href="https://www.youtube.com/watch?v=V0G8X_Dbpz0"><img src="http://img.youtube.com/vi/V0G8X_Dbpz0/0.jpg" width="336" height="188"
+   border="10" /></a>
+   
 #### Creating a Public Subnet:  
 #### Creating a Bastion Host:  
 #### Creating a Private Subnet:  
