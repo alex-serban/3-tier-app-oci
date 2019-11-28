@@ -41,14 +41,36 @@ A compartment is a logical container which helps organize and manage access cont
 <a href="https://www.youtube.com/watch?v=V0G8X_Dbpz0"><img src="http://img.youtube.com/vi/V0G8X_Dbpz0/0.jpg" width="336" height="188" border="0"/></a>
    
 #### Creating a Public Subnet:  
+
+<a href="https://www.youtube.com/watch?v=trp2b7mNJzI"><img src="http://img.youtube.com/vi/trp2b7mNJzI/0.jpg" width="336" height="188" border="0"/></a>
+
 #### Creating a Bastion Host:  
-#### Creating a Private Subnet:  
+
+<a href="https://www.youtube.com/watch?v=AB6BWhG1Djs"><img src="http://img.youtube.com/vi/AB6BWhG1Djs/0.jpg" width="336" height="188" border="0"/></a>
+
+#### Creating a Private Subnet: 
+
+<a href="https://www.youtube.com/watch?v=G8VGoByCgiw"><img src="http://img.youtube.com/vi/G8VGoByCgiw/0.jpg" width="336" height="188" border="0"/></a>
+
 #### Creating an Application Node:  
+
+<a href="https://www.youtube.com/watch?v=PV5ueOK1KXw"><img src="http://img.youtube.com/vi/PV5ueOK1KXw/0.jpg" width="336" height="188" border="0"/></a>
+
 #### Creating the Autonomous Database:
+
+<a href="https://www.youtube.com/watch?v=sIuCh63tLgo"><img src="http://img.youtube.com/vi/sIuCh63tLgo/0.jpg" width="336" height="188" border="0"/></a>
+
 #### Creating the Load Balancer:
+
+<a href="https://www.youtube.com/watch?v=djNfEnSBpiA"><img src="http://img.youtube.com/vi/djNfEnSBpiA/0.jpg" width="336" height="188" border="0"/></a>
+
 #### Developing a CGI application:  
+
+<a href="https://www.youtube.com/watch?v=yYNX3xv69MQ"><img src="http://img.youtube.com/vi/yYNX3xv69MQ/0.jpg" width="336" height="188" border="0"/></a>
+
 #### Scalling out using OCI Custom Images:
 
+<a href="https://www.youtube.com/watch?v=DtawSf085-s"><img src="http://img.youtube.com/vi/DtawSf085-s/0.jpg" width="336" height="188" border="0"/></a>
 
 ```bash
 #cloud-config
