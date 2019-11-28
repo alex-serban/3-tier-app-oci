@@ -72,6 +72,8 @@ A compartment is a logical container which helps organize and manage access cont
 
 <a href="https://www.youtube.com/watch?v=DtawSf085-s"><img src="http://img.youtube.com/vi/DtawSf085-s/0.jpg" width="336" height="188" border="0"/></a>
 
+[![OCI Custom Images](https://img.youtube.com/vi/DtawSf085-s/0.jpg)](https://www.youtube.com/watch?v=DtawSf085-s)
+
 ```bash
 #cloud-config
 write_files:
