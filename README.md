@@ -105,10 +105,12 @@ The purpose of this step is to create a *content-generating program* which conne
 
 The *Common Gateway Interface* or *CGI* is an interface specification for web servers to execute programs that execute like console applications running on a server that generates web pages dynamically. Enabling CGI support for my HTTP server requires editing the `httpd.conf` from file located in `/etc/httpd/conf`. It's enough to follow the video tutorial to enable this, more details for enabling CGI on Apache can be found [here][cgi].
 
-Next step is to disable *SELinux*, which will by default forbid CGI scripts from running on your Application Node. *SELinux* or *Security-Enhanced Linux* is a Linux kernel module that provides a mechanism for supporting access control security policies. Disabling SELinux temporarily is done using the `sudo setenforce 0` command, to make this persistent after a reboot parameter `SELINUX` in the `/etc/selinux/config` needs to be changed to:
+Next step is to disable *SELinux*, which will by default forbids CGI scripts from running on the Application Node. *SELinux* or *Security-Enhanced Linux* is a Linux kernel module that provides a mechanism for supporting access control security policies. Disabling SELinux temporarily is done using the `sudo setenforce 0` command, to make this persistent after a reboot parameter `SELINUX` in the `/etc/selinux/config` needs to be changed to:
 ```bash
 SELINUX=disabled
 ```
+
+Connecting to the Autonomous Database is achieved through the *Oracle Instant Client*. The [Oracle Instant Client][instantclient] enables applications to connect to an Oracle Database. The Instant Client libraries provide the necessary network connectivity, as well as basic and high end data features, to make full use of Oracle Database.
 
 Installing the Oracle Instant Client 
 ```bash
@@ -205,3 +207,4 @@ Interested to join [Oracle][jd]?
 [osn]: https://www.oracle.com/cloud/networking/service-gateway.html
 [apache]: https://httpd.apache.org/
 [cgi]: https://httpd.apache.org/docs/2.4/howto/cgi.html
+[instantclient]: https://www.oracle.com/database/technologies/instant-client.html
