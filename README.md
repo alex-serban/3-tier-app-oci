@@ -103,7 +103,12 @@ echo "<p>This is Application Node - 1</p>" > index.html
 #### Developing a CGI application:  
 The purpose of this step is to create a *content-generating program* which connects to the *Autonomous Database* and displays the content of a database table in HTML served through the browser using the *Apache HTTP Server*. 
 
-Editting `httpd.conf` from file located in `/etc/httpd/conf`
+Editing `httpd.conf` from file located in `/etc/httpd/conf`
+
+Next step is to disable *SELinux*, which will by default forbid CGI scripts from running on your Application Node. *SELinux* or *Security-Enhanced Linux* is a Linux kernel module that provides a mechanism for supporting access control security policies. Disabling SELinux temporarily is done using the `setenforce 0` command, to make this persistent after a reboot parameter `SELINUX` in the `/etc/selinux/config` needs to read:
+```bash
+SELINUX=disabled
+```
 
 Installing the Oracle Instant Client 
 ```bash
