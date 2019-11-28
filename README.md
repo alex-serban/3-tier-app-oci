@@ -133,7 +133,7 @@ ldconfig
 ```
 To authenticate to the *Autonomous Database* the *Oracle Wallet* needs to be downloaded from the Object Storage and unzipped in the `/usr/lib/oracle/18.3/client64/lib/network/admin/` directory. 
 
-Final step is to write the application. In the `/var/www/html` director the `index.html` file needs to be replaced with the following `index.sh` file:
+Final step is to write the application. In the `/var/www/html` director the `index.html` file needs to be replaced with `index.sh` containing:
 
 ```bash
 #!/bin/sh
@@ -163,43 +163,11 @@ also available for download [here](/index.sh).
 [![CGI Application](https://img.youtube.com/vi/yYNX3xv69MQ/0.jpg)](https://www.youtube.com/watch?v=yYNX3xv69MQ)
 
 #### Scalling out using OCI Custom Images:
+The purpose of this step is to scale out (horizontally scale) my CGI architecture by adding an second *Application Node* using the *OCI Custom Images* feature.
+
+Custom Images enables the capturing of snapshots from a Virtual Machine and using them to launch other instances running the same customizations, configuration, and software installed when the image was created. More on this is available [here][customimg]. 
 
 [![OCI Custom Images](https://img.youtube.com/vi/DtawSf085-s/0.jpg)](https://www.youtube.com/watch?v=DtawSf085-s)
-
-```bash
-#cloud-config
-write_files:
-    - path: /etc/environment
-      permissions: 0777
-      content: |
-        LD_LIBRARY_PATH=/usr/lib/oracle/18.3/client64/lib:$LD_LIBRARY_PATH
-runcmd:
- - mkdir idcs-sample-app
- - cd idcs-sample-app/
- - [ wget, --output-document=idcsapp2.zip, "https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/YCbO7RYzKscSU5uOemIGon9SOiz948NMzzO_3BV2sN4/n/frvly4ywct1p/b/security/o/idcsapp2.zip"]
- - unzip idcsapp2.zip
- - touch /idcs-sample-app/python/.env
- - echo "CONSTRING=admin/oracleORACLE123@security_high" >> /idcs-sample-app/python/.env
- - systemctl stop firewalld
- # - bash firewall.sh
- - sudo yum install -y python-pip
- - sudo python -m pip install "django<2"
- - pip install -r requirements.txt
- - pip install cx_Oracle
- - yum install -y oracle-instantclient18.3-basic.x86_64 
- - yum install -y oracle-instantclient18.3-devel.x86_64 
- - yum install -y oracle-instantclient18.3-sqlplus.x86_64
- - yum install -y oracle-instantclient18.3-tools.x86_64
- - [ wget,  --output-document=wallet.zip, "https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/bEIRP-U7NiU1KgCWWPvm8JoE-sRnTZ1gLvnIAccYxCo/n/frvly4ywct1p/b/security/o/Wallet_security_3.zip", -P, /usr/lib/oracle/18.3/client64/lib/network/admin]
- - [ unzip, /idcs-sample-app/wallet.zip, -d, /usr/lib/oracle/18.3/client64/lib/network/admin/]
- - echo "export LD_LIBRARY_PATH=/usr/lib/oracle/18.3/client64/lib:$LD_LIBRARY_PATH" >>/home/opc/.bash_profile
- - echo "cd /idcs-sample-app" >> /home/opc/.bash_profile
- - export LD_LIBRARY_PATH=/usr/lib/oracle/18.3/client64/lib:$LD_LIBRARY_PATH
- - echo "export LD_LIBRARY_PATH=/usr/lib/oracle/18.3/client64/lib:$LD_LIBRARY_PATH" >>/etc/bashrc
- - source /etc/bashrc
- - nohup python /idcs-sample-app/manage.py runserver 0.0.0.0:8080 &
-```
-
 
 
 You can consume the entire tutorial on this [YouTube playlist][playlist].
@@ -219,3 +187,4 @@ Interested to join [Oracle][jd]?
 [apache]: https://httpd.apache.org/
 [cgi]: https://httpd.apache.org/docs/2.4/howto/cgi.html
 [instantclient]: https://www.oracle.com/database/technologies/instant-client.html
+[customimg]: https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/managingcustomimages.htm
