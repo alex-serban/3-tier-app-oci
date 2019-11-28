@@ -25,7 +25,7 @@ The purpose of the tutorial is to familiarize the viewer with the OCI Web Consol
 * [Autonomous Database](#creating-the-autonomous-database)  
 * [Load Balancer](#creating-the-load-balancer)  
 * [CGI Application (advanced)](#developing-a-cgi-application)  
-* [Scalling out](#scalling-out-using-oci-custom-images)  
+* [Scalling out](#scaling-out-using-oci-custom-images)  
 
 
 
