@@ -34,10 +34,14 @@ A compartment is a logical container which helps organize and manage access cont
 
 [![Compartment](https://img.youtube.com/vi/XRPuwaaL2W8/0.jpg)](https://www.youtube.com/watch?v=XRPuwaaL2W8)
 
+[^ back](#steps--components-to-create)
+
 #### Creating a Virtual Cloud Network (VCN):  
 When working with OCI, setting up a VCN is one of the first steps you'll have to undertake. The VCN is a virtual, private network that you set up in Oracle data centers. It closely resembles a traditional network, with firewall rules and specific types of communication gateways that you can choose to use. A VCN resides in a single Oracle Cloud Infrastructure region and covers a single, contiguous IPv4 CIDR block of your choice. You can read more about what a CIDR is [here][cidr], but for this tutorial is enough to understand that a CIDR is a method for allocating IP addresses. 
 
 [![VCN](https://img.youtube.com/vi/V0G8X_Dbpz0/0.jpg)](https://www.youtube.com/watch?v=V0G8X_Dbpz0)
+
+[^ back](#steps--components-to-create)
    
 #### Creating a Public Subnet:  
 Subnets are subdivisions you define in a VCN. They contain virtual network interface cards (VNICs), which attach to instances. Each subnet consists of a contiguous range of IP addresses that must not overlap with other subnets in the VCN.
@@ -46,12 +50,16 @@ For implementing the 3-tier architecture I will need an *Internet Gateway* which
 
 [![Public Subnet](https://img.youtube.com/vi/trp2b7mNJzI/0.jpg)](https://www.youtube.com/watch?v=trp2b7mNJzI)
 
+[^ back](#steps--components-to-create)
+
 #### Creating a Bastion Host:  
 A bastion host is a special-purpose computer on a network specifically designed and configured to withstand attacks. In the architecture I'm proposing, the *Bastion Host* acts as a proxy through which I can access the *Application Nodes* which will sit in the Private Subnet. I've chosen for the *Bastion Host* to run Oracle Linux. To access it, I need first to generate a pair of SSH keys using [PuTTYgen][puttygen]. To connect to the instance I used [MobaXterm][moba]. The default user for login is `opc` and you can use the `sudo` command to run administrative tasks.
 
 More on accessing an Oracle Linux Instance [here][accessol].  
 
 [![Bastion Host](https://img.youtube.com/vi/AB6BWhG1Djs/0.jpg)](https://www.youtube.com/watch?v=AB6BWhG1Djs)
+
+[^ back](#steps--components-to-create)
 
 #### Creating a Private Subnet: 
 Creating the private subnet is similar to creating the public subnet, difference is that I will restrict the VNICs to have public IPs allocated to them. Besides the mandatory *Route Table* and *Security List* I will need a *NAT Gateway* and *Service Gateway*.
@@ -62,10 +70,14 @@ A *Service Gateway* is yet another virtual router which provides a path for priv
 
 [![Private Subnet](https://img.youtube.com/vi/G8VGoByCgiw/0.jpg)](https://www.youtube.com/watch?v=G8VGoByCgiw)
 
+[^ back](#steps--components-to-create)
+
 #### Creating an Application Node:  
 The process of creating the *Application Node* is similar the *Bastion Host*, but placing it in the private subnet will inhibit a public IP to be assigned, so connection will only be possible through the *Bastion Host*. 
 
 [![Application Node](https://img.youtube.com/vi/PV5ueOK1KXw/0.jpg)](https://www.youtube.com/watch?v=PV5ueOK1KXw)
+
+[^ back](#steps--components-to-create)
 
 #### Creating the Autonomous Database:
 An autonomous database is a cloud database that uses machine learning to eliminate the human labor associated with database tuning, security, backups, updates, and other routine management tasks traditionally performed by database administrators (DBAs).
@@ -73,6 +85,8 @@ An autonomous database is a cloud database that uses machine learning to elimina
 For authenticating access to the Autonomous Database an *Oracle Wallet* is used. To make the *Oracle Wallet* accessible I will upload it to an Object Storage which will allow for private download through the *Service Gateway* onto the *Application Node*.
 
 [![Autonomous Database](https://img.youtube.com/vi/sIuCh63tLgo/0.jpg)](https://www.youtube.com/watch?v=sIuCh63tLgo)
+
+[^ back](#steps--components-to-create)
 
 #### Creating the Load Balancer:
 The Load Balancing service provides automated traffic distribution from one entry point to multiple servers reachable from your virtual cloud network (VCN). The service offers a load balancer with your choice of a public or private IP address. In my 3-tier architecture, the *Load Balancer* will be deployed in the public subnet, to allow for connections from outside the VCN, but will route HTTP traffic to the *Application Node* which resides in the private subnet. 
@@ -99,6 +113,8 @@ echo "<p>This is Application Node - 1</p>" > index.html
 ```
 
 [![Load Balancer](https://img.youtube.com/vi/djNfEnSBpiA/0.jpg)](https://www.youtube.com/watch?v=djNfEnSBpiA)
+
+[^ back](#steps--components-to-create)
 
 #### Developing a CGI application:  
 The purpose of this step is to create a *content-generating program* which connects to the *Autonomous Database* and displays the content of a database table in HTML served through the browser using the *Apache HTTP Server*. 
@@ -162,6 +178,8 @@ also available for download [here](/index.sh).
 
 [![CGI Application](https://img.youtube.com/vi/yYNX3xv69MQ/0.jpg)](https://www.youtube.com/watch?v=yYNX3xv69MQ)
 
+[^ back](#steps--components-to-create)
+
 #### Scaling out using OCI Custom Images:
 The purpose of this step is to scale out (horizontally scale) my CGI architecture by adding an second *Application Node* using the *OCI Custom Images* feature.
 
@@ -169,6 +187,7 @@ Custom Images enables the capturing of snapshots from a Virtual Machine and usin
 
 [![OCI Custom Images](https://img.youtube.com/vi/DtawSf085-s/0.jpg)](https://www.youtube.com/watch?v=DtawSf085-s)
 
+[^ back](#steps--components-to-create)
 
 You can consume the entire tutorial on this [YouTube playlist][playlist].
 
