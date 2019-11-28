@@ -24,7 +24,7 @@ The purpose of the tutorial is to familiarize the viewer with the OCI Web Consol
 * [Application Node](#creating-an-application-node)  
 * [Autonomous Database](#creating-the-autonomous-database)  
 * [Load Balancer](#creating-the-load-balancer)  
-* [CGI Application](#developing-a-cgi-application)  
+* [CGI Application (advanced)](#developing-a-cgi-application)  
 * [Scalling out](#scalling-out-using-oci-custom-images)  
 
 
@@ -101,6 +101,9 @@ echo "<p>This is Application Node - 1</p>" > index.html
 [![Load Balancer](https://img.youtube.com/vi/djNfEnSBpiA/0.jpg)](https://www.youtube.com/watch?v=djNfEnSBpiA)
 
 #### Developing a CGI application:  
+The purpose of this step is to create a *content-generating program* which connects to the *Autonomous Database* and displays the content of a database table in HTML served through the browser using the *Apache HTTP Server*. 
+
+Editting `httpd.conf` from file located in `/etc/httpd/conf`
 
 Installing the Oracle Instant Client 
 ```bash
@@ -113,6 +116,31 @@ or in one command
 ```bash
 sudo yum install -y oracle-instantclient18.3*
 ```
+
+```bash
+#!/bin/sh
+
+echo Content-type: text/html
+echo
+
+echo "<html>"
+echo "<head><title>Application</title></head>"
+echo "<body>"
+
+echo "<p>This application is running on <b><u>"`hostname`"</u></b>!</p>"
+
+sqlplus64 -s ADMIN/ORACLEoracle_123@AUTDB_high <<!
+        SET MARKUP HTML ON
+        SET FEEDBACK OFF
+        SELECT PROD_NAME, PROD_DESC
+        FROM SH.PRODUCTS
+        ORDER BY PROD_NAME;
+        QUIT
+!
+
+echo "</body></html>"
+```
+also available for download [here](/index.sh).
 
 [![CGI Application](https://img.youtube.com/vi/yYNX3xv69MQ/0.jpg)](https://www.youtube.com/watch?v=yYNX3xv69MQ)
 
@@ -154,29 +182,7 @@ runcmd:
  - nohup python /idcs-sample-app/manage.py runserver 0.0.0.0:8080 &
 ```
 
-```bash
-#!/bin/sh
 
-echo Content-type: text/html
-echo
-
-echo "<html>"
-echo "<head><title>Application</title></head>"
-echo "<body>"
-
-echo "<p>This application is running on <b><u>"`hostname`"</u></b>!</p>"
-
-sqlplus64 -s ADMIN/ORACLEoracle_123@AUTDB_high <<!
-        SET MARKUP HTML ON
-        SET FEEDBACK OFF
-        SELECT PROD_NAME, PROD_DESC
-        FROM SH.PRODUCTS
-        ORDER BY PROD_NAME;
-        QUIT
-!
-
-echo "</body></html>"
-```
 
 You can consume the entire tutorial on this [YouTube playlist][playlist].
 
