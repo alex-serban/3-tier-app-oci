@@ -78,6 +78,7 @@ For authenticating access to the Autonomous Database an *Oracle Wallet* is used.
 The Load Balancing service provides automated traffic distribution from one entry point to multiple servers reachable from your virtual cloud network (VCN). The service offers a load balancer with your choice of a public or private IP address. In my 3-tier architecture, the *Load Balancer* will be deployed in the public subnet, to allow for connections from outside the VCN, but will route HTTP traffic to the *Application Node* which resides in the private subnet. 
 
 For demonstrating this capability I'll create an [Apache HTTP Server][apache] on the *Application Node*.
+Also, it's important to know that besides the *Security List* there is a local firewall running on the virtual machine (VM) running the *Application Node*. The `firewall-cmd` command will punch a hole in the local firewall running on the VM.
 Here are the commands used to install and configure the HTTP server:
 
 ```bash
