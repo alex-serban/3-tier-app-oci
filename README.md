@@ -35,11 +35,14 @@ A compartment is a logical container which helps organize and manage access cont
 [![Compartment](https://img.youtube.com/vi/XRPuwaaL2W8/0.jpg)](https://www.youtube.com/watch?v=XRPuwaaL2W8)
 
 #### Creating a Virtual Cloud Network (VCN):  
-When working with OCI, setting up a VCN is one of the first steps you'll have to undertake. The VCN is a virtual, private network that you set up in Oracle data centers. It closely resembles a traditional network, with firewall rules and specific types of communication gateways that you can choose to use. A VCN resides in a single Oracle Cloud Infrastructure region and covers a single, contiguous IPv4 CIDR block of your choice. You can read more about what a CIDR is [here][cidr], but for the purpose of this tutorial is enough to understand that a CIDR is a method for allocating IP addresses 
+When working with OCI, setting up a VCN is one of the first steps you'll have to undertake. The VCN is a virtual, private network that you set up in Oracle data centers. It closely resembles a traditional network, with firewall rules and specific types of communication gateways that you can choose to use. A VCN resides in a single Oracle Cloud Infrastructure region and covers a single, contiguous IPv4 CIDR block of your choice. You can read more about what a CIDR is [here][cidr], but for the purpose of this tutorial is enough to understand that a CIDR is a method for allocating IP addresses. 
 
 [![VCN](https://img.youtube.com/vi/V0G8X_Dbpz0/0.jpg)](https://www.youtube.com/watch?v=V0G8X_Dbpz0)
    
 #### Creating a Public Subnet:  
+Subnets are subdivisions you define in a VCN. They contain virtual network interface cards (VNICs), which attach to instances. Each subnet consists of a contiguous range of IP addresses that must not overlap with other subnets in the VCN.
+
+For implementing the 3-tier architecture I will need an *Internet Gateway* which acts as a virtual router that permits direct internet access. All subnet require a *Route Table* for routing traffic to destinations outside the VCN and *Security Rules* that consist of the ingress (inbound) and egress (outbound) rules that specify the types of traffic (protocol and port) allowed in and out of the instances.
 
 [![Public Subnet](https://img.youtube.com/vi/trp2b7mNJzI/0.jpg)](https://www.youtube.com/watch?v=trp2b7mNJzI)
 
