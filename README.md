@@ -126,7 +126,7 @@ Next step is to disable *SELinux*, which will by default forbids CGI scripts fro
 SELINUX=disabled
 ```
 
-<mark>*Later addition:*</mark> (Re-enabling *SELinux* and configure it for CGI)(SELinux.md)
+<mark>Later addition:</mark> (Re-enabling *SELinux* and configure it for CGI)(SELinux.md)
 
 Connecting to the Autonomous Database is achieved through the *Oracle Instant Client*. The [Oracle Instant Client][instantclient] enables applications to connect to an Oracle Database. The Instant Client libraries provide the necessary network connectivity, as well as basic and high end data features, to make full use of Oracle Database.
 
