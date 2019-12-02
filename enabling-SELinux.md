@@ -1,8 +1,8 @@
 **Re-enabling SELinux**
 
 ```bash
-sudo setenforce 0
-/etc/selinux/config - SELINUX=disabled
+sudo setenforce 1
+/etc/selinux/config - SELINUX=enforce
 ```
 
 **Changing the context for my files***
